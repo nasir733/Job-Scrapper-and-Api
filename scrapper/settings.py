@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-o=8yqu$y4&3ffl0g)g!v1u)sae-*zl=d@#lz4^61t9o6dkt$#b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 BROKER_POOL_LIMIT = 3
@@ -86,16 +86,16 @@ WSGI_APPLICATION = "scrapper.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if DEBUG:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+# if DEBUG:
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.sqlite3",
+#             "NAME": BASE_DIR / "db.sqlite3",
+#         }
+#     }
 
-if not DEBUG:
-    DATABASES = {
+# if not DEBUG:
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": "webscrapper",
@@ -104,7 +104,7 @@ if not DEBUG:
             "HOST": "database-1.cgflmpcc3zf6.us-east-2.rds.amazonaws.com",
             "PORT": "5432",
         }
-    }
+}
 
 
 # Password validation
