@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-o=8yqu$y4&3ffl0g)g!v1u)sae-*zl=d@#lz4^61t9o6dkt$#b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False 
+DEBUG =True
 
 ALLOWED_HOSTS = []
 BROKER_POOL_LIMIT = 3
@@ -87,10 +87,10 @@ WSGI_APPLICATION = "scrapper.wsgi.application"
 DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
-            "NAME": "webscrapper",
-            "USER": "postgres",
-            "PASSWORD": "24242424",
-            "HOST": "database-1.cgflmpcc3zf6.us-east-2.rds.amazonaws.com",
+            "NAME":f'{os.environ.get("NAME")}',
+            "USER": f'{os.environ.get("USER")}',
+            "PASSWORD": f'{os.environ.get("PASSWORD")}',
+            "HOST":f'{os.environ.get("HOST")}',
             "PORT": "5432",
         }
 }
