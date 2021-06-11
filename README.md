@@ -22,8 +22,8 @@ This is a hobby project made to help people jobs from there favourite websites i
 Can only view things from this demo account 
  ### user = demo
  ### password = ultimatedemo
- [Admin Panel]("https://jobapiscrapper.herokuapp.com/admin")
+ [Admin Panel](https://jobapiscrapper.herokuapp.com/admin)
  
 # DOCS
- [Documentaion Redoc]("https://jobapiscrapper.herokuapp.com/api/schema/redoc/")
- [Documentaion Swagger]("https://jobapiscrapper.herokuapp.com/api/schema/swagger-ui/")
+ [Documentaion Redoc](https://jobapiscrapper.herokuapp.com/api/schema/redoc/)
+ [Documentaion Swagger](https://jobapiscrapper.herokuapp.com/api/schema/swagger-ui/)
