@@ -96,7 +96,7 @@ WSGI_APPLICATION = "scrapper.wsgi.application"
 #     }
 
 # if not DEBUG:
-    DATABASES = {
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": "webscrapper",
