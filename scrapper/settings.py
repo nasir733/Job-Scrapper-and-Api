@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOW_ALL_ORIGINS=True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# CELERY_BROKER_URL = "redis://127.0.0.1:6379" for develpoment
 CELERY_BROKER_URL=os.environ.get("REDISCLOUD_URL")
 
 MIDDLEWARE = [
@@ -84,17 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "scrapper.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# if DEBUG:
-# DATABASES = {
-#         "default": {
-#             "ENGINE": "django.db.backends.sqlite3",
-#             "NAME": BASE_DIR / "db.sqlite3",
-#         }
-#     }
 
-# if not DEBUG:
 DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
