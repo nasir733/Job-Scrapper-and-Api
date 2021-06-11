@@ -1,3 +1,1 @@
-web: gunicorn scrapper.wsgi
-worker: celery -A scrapper beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
-nasir: celery -A scrapper worker -l info --pool=solo
+web: env > .env; env PYTHONUNBUFFERED=true honcho start -f Procfile.real 2>&1
