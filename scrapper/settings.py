@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 
 import django_heroku
@@ -95,17 +96,18 @@ WSGI_APPLICATION = "scrapper.wsgi.application"
 #     }
 
 # if not DEBUG:
-DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": "webscrapper",
-            "USER": "postgres",
-            "PASSWORD": "24242424",
-            "HOST": "database-1.cgflmpcc3zf6.us-east-2.rds.amazonaws.com",
-            "PORT": "5432",
-        }
-}
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": "webscrapper",
+#             "USER": "postgres",
+#             "PASSWORD": "24242424",
+#             "HOST": "database-1.cgflmpcc3zf6.us-east-2.rds.amazonaws.com",
+#             "PORT": "5432",
+#         }
+# }
 
+DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
