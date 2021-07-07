@@ -1,4 +1,5 @@
-# Jobs Scrapper && Api
+# This project is Decrypted plzz visit https://github.com/nasir733/OneShopJobs
+## Jobs Scrapper && Api
 
 This is a hobby project made to help people jobs from there favourite websites in one place This scrapper will scrape the jobs from revelant website (Indeed.com and stackoverflow) planning to add support for websites soon
 
